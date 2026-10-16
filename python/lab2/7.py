@@ -1,4 +1,4 @@
-def cmmmdc(a, b):
+def cmmmmc(a, b):
     ca = a
     cb = b
     while(b):
@@ -7,10 +7,15 @@ def cmmmdc(a, b):
         b = r
     return (ca * cb) // a
 
-list = [10, 12, 14, 15, 20]
-start = int(input())
-end = int(input())
-num = list[start]
-for i in range(start + 1, end + 1):
-    num = cmmmdc(num, list[i])     
-print(num)
+
+def solve():
+    list = [10, 12, 14, 15, 20]
+    start = int(input())
+    end = int(input())
+    num = list[start]
+    for i in range(start + 1, end + 1):
+        num = cmmmdc(num, list[i])     
+    print(num)
+
+
+solve()

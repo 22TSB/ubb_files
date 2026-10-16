@@ -60,16 +60,20 @@ def satisfies(condition, x, y):
     return a is not None and b is not None and a == b
 
 
-condition = input("Condition: ")
-numbers = [12, 36, 31, 42, 63]
+def solve():
+    condition = input("Condition: ")
+    numbers = [12, 36, 31, 42, 63]
 
-result = []
+    result = []
 
-for number in numbers:
-    x = number // 10
-    y = number % 10
+    for number in numbers:
+        x = number // 10
+        y = number % 10
 
-    if satisfies(condition, x, y):
-        result.append(number)
+        if satisfies(condition, x, y):
+            result.append(number)
 
-print(result)
+    print(result)
+
+
+solve()

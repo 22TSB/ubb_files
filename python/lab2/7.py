@@ -14,7 +14,7 @@ def solve():
     end = int(input())
     num = list[start]
     for i in range(start + 1, end + 1):
-        num = cmmmdc(num, list[i])     
+        num = cmmmmc(num, list[i])     
     print(num)
 
 

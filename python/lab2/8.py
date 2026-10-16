@@ -1,9 +1,9 @@
-list = [15, 20, 35, 40]
+list = [23, 41, 62]
 op = input()
-for i in range(1, len(list)):
+for i in list:
     if (op == "+"):
-        print(list[i] + key)
+        print((i // 10) + (i % 10))
     elif (op == "*"):
-        print(list[i] * key)
+        print((i // 10) * (i % 10))
     elif (op == "^"):
-        print(list[i] ^ key)
+        print((i // 10) ^ (i % 10))

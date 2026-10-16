@@ -6,13 +6,15 @@ def palin(n):
         n //= 10
     return inv
 
-list = [12, 21, 34, 43, 56]
-cnt = 0
+def solve():
+    list = [12, 21, 34, 43, 56]
+    cnt = 0
 
-for i in range(len(list)):
-    pi = palin(list[i])
-    for j in range(i + 1, len(list)):
-        if (pi == list[j]):
-            cnt += 1
+    for i in range(len(list)):
+        pi = palin(list[i])
+        for j in range(i + 1, len(list)):
+            if (pi == list[j]):
+                cnt += 1
+    print(cnt)
 
-print(cnt)
+solve()

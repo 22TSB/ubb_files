@@ -41,8 +41,7 @@ def user_menu(users, watchlists, user_path, watchlist_path):
             try:
                 age = int(input("Enter age: "))
                 users = add_user(users, name, age)
-                # save_to_json(users, user_path)
-                save_users(users, user_path)
+                save_to_json(users, user_path)
                 print("User added successfully.")
 
             except ValueError as e:
@@ -53,10 +52,8 @@ def user_menu(users, watchlists, user_path, watchlist_path):
 
             try:
                 users, watchlists = delete_user(users, watchlists, name)
-                # save_to_json(users, user_path)
-                save_users(users, user_path)
-                # save_to_json(watchlists, watchlist_path)
-                save_watchlists(watchlists, watchlist_path)
+                save_to_json(users, user_path)
+                save_to_json(watchlists, watchlist_path)
                 print("User deleted successfully")
                 
             except ValueError as e:
@@ -77,10 +74,8 @@ def user_menu(users, watchlists, user_path, watchlist_path):
 
             try:
                 users, watchlists = update_user(users, watchlists, name, new_name, new_age)
-                # save_to_json(users, user_path)
-                save_users(users, user_path)
-                # save_to_json(watchlists, watchlist_path)
-                save_watchlists(watchlists, watchlist_path)
+                save_to_json(users, user_path)
+                save_to_json(watchlists, watchlist_path)
                 print("User updated successfully")
             except ValueError as e:
                 print(f"Error: {e}")
@@ -109,8 +104,7 @@ def movie_menu(movies, path):
                 actors_input = input("Enter actors separated by comma ',': ")
                 actors = [a.strip() for a in actors_input.split(",")]
                 movies = add_movie(movies, name, release_date, imdb_score, actors)
-                # save_to_json(movies, path)
-                save_movies(movies, path)
+                save_to_json(movies, path)
                 print("Movie added successfully.")
 
             except ValueError as e:
@@ -121,8 +115,7 @@ def movie_menu(movies, path):
             
             try:
                 movies = delete_movie(movies, name)
-                # save_to_json(movies, path)
-                save_movies(movies, path)
+                save_to_json(movies, path)
                 print("Movie deleted successfully.")
 
             except ValueError as e:
@@ -134,8 +127,7 @@ def movie_menu(movies, path):
             try:
                 new_score = float(input("Enter new IMDb score: "))
                 movies = update_imdb_score(movies, name, new_score)
-                # save_to_json(movies, path)
-                save_movies(movies, path)
+                save_to_json(movies, path)
                 print("IMDb score updated successfully.")
 
             except ValueError as e:
@@ -161,8 +153,7 @@ def watchlist_menu(users, movies, watchlists, path):
             movie_name = input("Enter movie name: ")
             try:
                 watchlists = add_watchlist_entry(watchlists, users, movies, user_name, movie_name)
-                # save_to_json(watchlists, path)
-                save_watchlists(watchlists, path)
+                save_to_json(watchlists, path)
                 print("Watch list entry added successfully.")
 
             except ValueError as e:

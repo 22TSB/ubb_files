@@ -1,0 +1,20 @@
+[
+    {
+        "name": "who iz i",
+        "release_date": "2026-10-23",
+        "imdb_score": 8.8,
+        "actors": [
+            "ali g",
+            "asap rocky"
+        ]
+    },
+    {
+        "name": "matrix",
+        "release_date": "1999-10-23",
+        "imdb_score": 9.2,
+        "actors": [
+            "p1",
+            "p2"
+        ]
+    }
+]

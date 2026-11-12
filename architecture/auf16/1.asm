@@ -17,8 +17,8 @@ section .text
 global main
 main:
     ; a * a
-    mov al, byte [a]
-    imul byte [a]
+    mov ax, word [a]
+    imul word [a]
     mov bx, ax 
 
     ; b / c

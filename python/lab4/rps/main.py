@@ -129,5 +129,6 @@ class High_score_table:
         high_score_list.append({"name": name, "score": score})
         repository.save_to_json(high_score_list, "./score.json")
 
-game = Rock_Paper_Scissors()
-game.rock_paper_scissors_round()
+if __name__ == "__main__":
+    game = Rock_Paper_Scissors()
+    game.rock_paper_scissors_round()
